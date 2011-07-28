@@ -1,4 +1,4 @@
- 
+
 <link href="/css/css.css" rel="stylesheet" type="text/css" />
 
 <script language="javascript"> 
@@ -7,7 +7,7 @@ function showMore() {
 	var text = document.getElementById("displayText");
 	if(ele.style.display == "block") {
     		ele.style.display = "none";
-		text.innerHTML = 'Info';
+		text.innerHTML = 'Click to View Work Breakdown';
   	}
 	else {
 		ele.style.display = "block";
@@ -22,7 +22,7 @@ function showMore2() {
 	var text = document.getElementById("displayText1");
 	if(ele1.style.display == "block") {
     		ele1.style.display = "none";
-		text.innerHTML = 'Info';
+		text.innerHTML = 'Click to View Work Breakdown';
   	}
 	else {
 		ele1.style.display = "block";
@@ -36,7 +36,7 @@ function showMore3() {
 	var text = document.getElementById("displayText2");
 	if(ele2.style.display == "block") {
     		ele2.style.display = "none";
-		text.innerHTML = 'Info';
+		text.innerHTML = 'Click to View Work Breakdown';
   	}
 	else {
 		ele2.style.display = "block";
@@ -50,10 +50,26 @@ function showMore4() {
 	var text = document.getElementById("displayText3");
 	if(ele3.style.display == "block") {
     		ele3.style.display = "none";
-		text.innerHTML = 'Info';
+		text.innerHTML = 'Click to View Work Breakdown';
   	}
 	else {
 		ele3.style.display = "block";
+		text.innerHTML = 'Hide';
+	}
+} 
+</script>
+
+</script>
+<script language="javascript"> 
+function showMore5() {
+	var ele4 = document.getElementById("toggleText4");
+	var text = document.getElementById("displayText4");
+	if(ele4.style.display == "block") {
+    		ele4.style.display = "none";
+		text.innerHTML = 'Click to View Work Breakdown';
+  	}
+	else {
+		ele4.style.display = "block";
 		text.innerHTML = 'Hide';
 	}
 } 
@@ -64,31 +80,31 @@ function showMore4() {
 $enddate = $_POST['enddate'];
 
 require("dateDiff.php");
-$today = date("d-m-y");
+$today = $_POST['startdate'];
 $result =  dateDiff("-", $enddate, $today);
 
-$s1 = $result * 0.20;
+$s1 = $result * 0.05;
 $s1 = floor($s1);
-$s2 = $result * 0.30;
+$s2 = $result * 0.60;
 $s2 = floor($s2);
-$s3 = $result * 0.30;
+$s3 = $result * 0.07;
 $s3 = floor($s3);
-$s4 = $result * 0.20;
+$s4 = $result * 0.21;
 $s4 = floor($s4);
+$s5 = $result * 0.07;
+$s5 = floor($s5);
 
 echo "<ul>";
 echo "<li>";
 $date = strtotime(date("d-m-y", strtotime($today)) . " +$s1 day");
-echo "Research will be need to be completed on: ".date('d-m-y', $date). "<br>";
+echo "Planning to be completed on: ".date('d-m-y', $date). "<br>";
 ?>
-<a id="displayText" href="javascript:showMore();">Info</a>
+<a id="displayText" href="javascript:showMore();">Click to View Work Breakdown</a>
 <div id="toggleText" style="display: none">
         <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-
+        <li>Understand The Assignment</li>
+        <li>Generate Ideas</li>
+        <li>Make Research Plan</li>
     </ul> 
 <?php
 echo "</li>";
@@ -98,15 +114,15 @@ $step2 = date('d-m-y', $date);
 
 echo "<li>";
 $date2 = strtotime(date("d-m-y", strtotime($step2)) . " +$s2 day");
-echo "Literature Review will need to be completed on: ".date('d-m-y', $date2)."<br>";
+echo "Research will need to be completed on: ".date('d-m-y', $date2)."<br>";
 ?>
-<a id="displayText1" href="javascript:showMore2();">Info</a>
+<a id="displayText1" href="javascript:showMore2();">Click to View Work Breakdown</a>
 <div id="toggleText1" style="display: none">
         <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
+        <li>Locate Sources</li>
+        <li>Review Sources</li>
+        <li>Active Reading and Making Notes</li>
+        <li>Revise and Update Original Plan</li>
 
     </ul> 
 <?php
@@ -116,16 +132,14 @@ $step3 = date('d-m-y', $date2);
 
 echo "<li>";
 $date3 = strtotime(date("d-m-y", strtotime($step3)) . " +$s3 day");
-echo "Draft will needed to be completed on: ".date('d-m-y', $date3)."<br>";
+echo " Organising will need to be completed on: ".date('d-m-y', $date3)."<br>";
 ?>
-<a id="displayText2" href="javascript:showMore3();">Info</a>
+<a id="displayText2" href="javascript:showMore3();">Click to View Work Breakdown</a>
 <div id="toggleText2" style="display: none">
         <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-
+        <li>Collect Your Notes</li>
+        <li>Arrange Notes to Reflect a Possible Argument</li>
+        <li>Make a Writing Plan</li>
     </ul>
 <?php
 echo "</li>";
@@ -134,23 +148,40 @@ $step4 = date('d-m-y', $date3);
 
 echo "<li>";
 $date4 = strtotime(date("d-m-y", strtotime($step4)) . " +$s4  day");
-echo "Final report will need to be completed on: ".date('d-m-y', $date4)."<br>";
+echo "Written report will need to be completed on: ".date('d-m-y', $date4)."<br>";
 ?>
-<a id="displayText3" href="javascript:showMore4();">Info</a>
+<a id="displayText3" href="javascript:showMore4();">Click to View Work Breakdown</a>
 <div id="toggleText3" style="display: none">
     <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
+        <li>Start Your First Draft</li>
+        <li>Follow Up Your Additional Research</li>
+        <li>Revise and Rewrite</li>
+        <li>Complete Referencing</li>
+    </ul>
+<?php
+echo "</li>";
 
+
+$step5 = date('d-m-y', $date4);
+
+echo "<li>";
+$date5 = strtotime(date("d-m-y", strtotime($step5)) . " +$s5  day");
+echo "Final report will need to be completed on: ".date('d-m-y', $date5)."<br>";
+?>
+<a id="displayText4" href="javascript:showMore5();">Click to View Work Breakdown</a>
+<div id="toggleText4" style="display: none">
+    <ul>
+        <li>Speak to a Writing Advisor</li>
+        <li>Check Argument</li>
+        <li>Check Formatting</li>
+        <li>Check References</li>
+        <li>Submit</li>
     </ul>
 <?php
 echo "</li>";
 echo "</ul>";
 
 ?>
-
         <form action="pdf.php" method="post"  target="_blank">
           <p>
             <label for="message"></label>
@@ -161,5 +192,20 @@ echo "</ul>";
           </p>
           <p>
             <input type="submit" value="Export to PDF" class="text_button">
+          </p>
+        </form>
+        
+                <form action="addEmail.php" method="post"  target="_blank">
+          <p>
+            <label for="message"></label>
+            <input type="text" value="" name="email">
+            <input type="hidden" value="<?php echo date('d-m-y', $date); ?>" name="date1"/>
+            <input type="hidden" value="<?php echo date('d-m-y', $date2);?>" name="date2"/>
+            <input type="hidden" value="<?php echo date('d-m-y', $date3); ?>" name="date3"/>
+            <input type="hidden" value="<?php echo date('d-m-y', $date4); ?>" name="date4"/>
+	    <input type="hidden" value="<?php echo date('d-m-y', $date5); ?>" name="date5"/>
+          </p>
+          <p>
+            <input type="submit" value="Submit" class="text_button">
           </p>
         </form>

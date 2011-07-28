@@ -11,6 +11,7 @@
 
 
 <form method='post' action='schedule.php'>
+    <input type="text" name="startdate" id=""/>
     <input type="text" name="enddate" id=""/>
     <input type="submit">
 </form>
