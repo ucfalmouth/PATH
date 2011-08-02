@@ -96,11 +96,10 @@ $s5 = floor($s5);
 
 echo "<ul>";
 echo "<li>";
-echo "<div class='acinfo plan'>";
 $date = strtotime(date("d-m-y", strtotime($today)) . " +$s1 day");
-echo "<span>Planning</span>to be completed on: <b>".date('d-m-y', $date). "<br></b>";
+echo "<b>Planning</b> to be completed on: <b>".date('d-m-y', $date). "<br></b>";
 ?>
-
+<div class="acinfo">
 <a id="displayText" href="javascript:showMore();">View Work Breakdown +</a>
 <div id="toggleText" style="display: none">
         <ul>
@@ -116,11 +115,10 @@ echo "</li>";
 $step2 = date('d-m-y', $date);
 
 echo "<li>";
-echo "<div class='acinfo res'>";
 $date2 = strtotime(date("d-m-y", strtotime($step2)) . " +$s2 day");
-echo "<span>Research</span>will need to be completed on:<b> ".date('d-m-y', $date2)."<br></b>";
+echo "<b>Research</b> will need to be completed on:<b> ".date('d-m-y', $date2)."<br></b>";
 ?>
-
+<div class="acinfo">
 <a id="displayText1" href="javascript:showMore2();">View Work Breakdown +</a>
 <div id="toggleText1" style="display: none">
         <ul>
@@ -137,11 +135,10 @@ echo "</li>";
 $step3 = date('d-m-y', $date2);
 
 echo "<li>";
-echo "<div class='acinfo org'>";
 $date3 = strtotime(date("d-m-y", strtotime($step3)) . " +$s3 day");
-echo "<span>Organising</span>will need to be completed on: <b>".date('d-m-y', $date3)."<br></b>";
+echo "<b>Organising</b> will need to be completed on: <b>".date('d-m-y', $date3)."<br></b>";
 ?>
-
+<div class="acinfo">
 <a id="displayText2" href="javascript:showMore3();">View Work Breakdown +</a>
 <div id="toggleText2" style="display: none">
         <ul>
@@ -156,11 +153,10 @@ echo "</li>";
 $step4 = date('d-m-y', $date3);
 
 echo "<li>";
-echo "<div class='acinfo wri'>";
 $date4 = strtotime(date("d-m-y", strtotime($step4)) . " +$s4  day");
-echo "<span>Written report</span>will need to be completed on: <b>".date('d-m-y', $date4)."<br></b>";
+echo "<b>Written report</b> will need to be completed on: <b>".date('d-m-y', $date4)."<br></b>";
 ?>
-
+<div class="acinfo">
 <a id="displayText3" href="javascript:showMore4();">View Work Breakdown +</a>
 <div id="toggleText3" style="display: none">
     <ul>
@@ -177,11 +173,10 @@ echo "</li>";
 $step5 = date('d-m-y', $date4);
 
 echo "<li>";
-echo "<div class='acinfo fin'>";
 $date5 = strtotime(date("d-m-y", strtotime($step5)) . " +$s5  day");
-echo "<span>Final report</span>will need to be completed on:<b> ".date('d-m-y', $date5)."<br></b>";
+echo "<b>Final report</b> will need to be completed on:<b> ".date('d-m-y', $date5)."<br></b>";
 ?>
-
+<div class="acinfo">
 <a id="displayText4" href="javascript:showMore5();">View Work Breakdown +</a>
 <div id="toggleText4" style="display: none">
     <ul>
