@@ -118,7 +118,7 @@ $step2 = date('d-m-y', $date);
 echo "<li>";
 echo "<div class='acinfo res'>";
 $date2 = strtotime(date("d-m-y", strtotime($step2)) . " +$s2 day");
-echo "<span>Research</span>will need to be completed on:<b> ".date('d-m-y', $date2)."<br></b>";
+echo "<span>Researching</span>will need to be completed on:<b> ".date('d-m-y', $date2)."<br></b>";
 ?>
 
 <a id="displayText1" href="javascript:showMore2();">View Work Breakdown +</a>
@@ -158,7 +158,7 @@ $step4 = date('d-m-y', $date3);
 echo "<li>";
 echo "<div class='acinfo wri'>";
 $date4 = strtotime(date("d-m-y", strtotime($step4)) . " +$s4  day");
-echo "<span>Written report</span>will need to be completed on: <b>".date('d-m-y', $date4)."<br></b>";
+echo "<span>Writing</span>will need to be completed on: <b>".date('d-m-y', $date4)."<br></b>";
 ?>
 
 <a id="displayText3" href="javascript:showMore4();">View Work Breakdown +</a>
@@ -179,7 +179,7 @@ $step5 = date('d-m-y', $date4);
 echo "<li>";
 echo "<div class='acinfo fin'>";
 $date5 = strtotime(date("d-m-y", strtotime($step5)) . " +$s5  day");
-echo "<span>Final report</span>will need to be completed on:<b> ".date('d-m-y', $date5)."<br></b>";
+echo "<span>Reviewing</span>will need to be completed on:<b> ".date('d-m-y', $date5)."<br></b>";
 ?>
 
 <a id="displayText4" href="javascript:showMore5();">View Work Breakdown +</a>
